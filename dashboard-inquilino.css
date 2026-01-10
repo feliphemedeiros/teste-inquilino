@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .app {
@@ -22,6 +23,13 @@ body {
     display: flex;
     flex-direction: column;
     color: #e5e7eb;
+    min-height: 100dvh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.app::-webkit-scrollbar {
+    display: none; /* Chrome / Safari */
 }
 
 /* TOPO */
