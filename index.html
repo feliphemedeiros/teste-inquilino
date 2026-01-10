@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Dashboard Inquilino</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard-inquilino.css">
+    <link rel="stylesheet" href="/css/dashboard-inquilino.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 </head>
 <body>
@@ -12,13 +13,20 @@
 <div class="app">
 
 <header class="header">
-   
-    <div>
-        <h1>João da Silva</h1>
-        <p>Rua das Flores, 123 – Apto 02</p>
-        <p>🟢 Aluguel em dia</p>
+    <div class="tenant-info">
+        <h1 id="tenant-name">João da Silva</h1>
+
+        <p id="tenant-address">
+            Rua das Flores, 123 – Apto 02
+        </p>
+
+        <p id="rent-status" class="rent-status status-ok">
+            🟢 Aluguel em dia
+        </p>
+
     </div>
 </header>
+
 
 <!-- CONTEÚDO -->
 <main class="content">
@@ -48,7 +56,7 @@
                       stroke="currentColor" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <span>Histórico</span>
+            <span>Histórico de pagamentos</span>
         </button>
 
         <!-- BOTÃO CONTRATO -->
@@ -64,9 +72,10 @@
                 <line x1="8" y1="17" x2="14" y2="17"
                       stroke="currentColor" stroke-width="2"/>
             </svg>
-            <span>Contrato</span>
+            <span>Meu contrato</span>
         </button>
- <button class="action-btn btn-history">
+
+          <button class="action-btn btn-history">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" r="9"
@@ -91,13 +100,15 @@
                 <line x1="8" y1="17" x2="14" y2="17"
                       stroke="currentColor" stroke-width="2"/>
             </svg>
-            <span>Perfil</span>
+            <span>Meu perfil</span>
         </button>
+
     </div>
 
 </main>
 
-<!-- BARRA INFERIOR 
+ <!-- BARRA INFERIOR -->
+  <!-- 
 <nav class="bottom-nav">
     <button class="nav-btn active">
         <span class="icon">🏠</span>
@@ -113,16 +124,8 @@
         <span class="icon">👤</span>
         <span class="label">perfil</span>
     </button>
-</nav>
-    -->
-
+</nav> -->
 </div>
-
+    <script src="/js/dashboard-inquilino.js"></script>
 </body>
 </html>
-
-
-
-
-
-
