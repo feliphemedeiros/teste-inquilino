@@ -32,6 +32,11 @@ body {
     scrollbar-width: none;
 }
 
+
+
+
+
+
 /* app continua travado */
 .app {
     width: 360px;
@@ -102,7 +107,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     background-color: #38bdf8;
-    color: #020617;
+    color: #e5e7eb;
     border-radius: 18px;
     display: flex;
     align-items: center;
