@@ -39,6 +39,8 @@ html, body {
     align-items: center;
     gap: 12px;
 
+    padding-top: env(safe-area-inset-top);
+
     padding: 0 16px;
     border-bottom: 1px solid #1e293b;
     background-color: #020617;
@@ -188,4 +190,5 @@ canvas {
     padding: 10px;
     border-radius: 12px;
 }
+
 
