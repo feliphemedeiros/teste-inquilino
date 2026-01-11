@@ -40,7 +40,7 @@ rents.forEach((item, index) => {
 /* CLIQUE NO BOTÃO PAGAR PIX */
 document.querySelectorAll(".pay-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-        window.location.href = "pix.html";
+        window.location.href = "./pix.html";
     });
 });
 
@@ -48,3 +48,4 @@ document.querySelectorAll(".pay-btn").forEach(btn => {
 document.getElementById("btnVoltar").addEventListener("click", () => {
     window.location.href = "dashboard-inquilino.html";
 });
+
