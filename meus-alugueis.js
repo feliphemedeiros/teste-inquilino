@@ -4,12 +4,7 @@ const rents = [
     { mes: "Abril / 2026", venceEm: 90, valor: "R$ 850,00" },
     { mes: "Maio / 2026", venceEm: 121, valor: "R$ 850,00" },
     { mes: "Junho / 2026", venceEm: 151, valor: "R$ 850,00" },
-    { mes: "Julho / 2026", venceEm: 181, valor: "R$ 850,00" },
-    { mes: "Agosto / 2026", venceEm: 31, valor: "R$ 850,00" },
-    { mes: "Setembro / 2026", venceEm: 59, valor: "R$ 850,00" },
-    { mes: "Outubro / 2026", venceEm: 90, valor: "R$ 850,00" },
-    { mes: "Novembro / 2026", venceEm: 121, valor: "R$ 850,00" },
-    { mes: "Dezembro / 2026", venceEm: 151, valor: "R$ 850,00" }
+   
 ];
 
 const list = document.getElementById("rentList");
@@ -48,4 +43,5 @@ document.querySelectorAll(".pay-btn").forEach(btn => {
 document.getElementById("btnVoltar").addEventListener("click", () => {
     window.location.href = "dashboard-inquilino.html";
 });
+
 
