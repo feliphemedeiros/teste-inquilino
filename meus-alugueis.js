@@ -9,13 +9,13 @@ const rents = [
     { mes: "Setembro / 2026", venceEm: 59, valor: "R$ 850,00" },
     { mes: "Outubro / 2026", venceEm: 90, valor: "R$ 850,00" },
     { mes: "Novembro / 2026", venceEm: 121, valor: "R$ 850,00" },
-    { mes: "Dezembro / 2026", venceEm: 151, valor: "R$ 850,00" },
-    
+    { mes: "Dezembro / 2026", venceEm: 151, valor: "R$ 850,00" }
 ];
 
 const list = document.getElementById("rentList");
 
-rents.forEach(item => {
+/* GERAR CARDS */
+rents.forEach((item, index) => {
     const card = document.createElement("div");
     card.className = "rent-card";
 
@@ -28,10 +28,23 @@ rents.forEach(item => {
 
         <div class="rent-action">
             <span class="rent-value">${item.valor}</span>
-            <button class="pay-btn">Pagar PIX</button>
+            <button class="pay-btn" data-index="${index}">
+                Pagar PIX
+            </button>
         </div>
     `;
 
     list.appendChild(card);
 });
 
+/* CLIQUE NO BOTÃO PAGAR PIX */
+document.querySelectorAll(".pay-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        window.location.href = "pix.html";
+    });
+});
+
+/* BOTÃO VOLTAR */
+document.getElementById("btnVoltar").addEventListener("click", () => {
+    window.location.href = "dashboard-inquilino.html";
+});
