@@ -20,7 +20,10 @@ body {
     padding: 16px;
 }
 
-
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 /* HEADER PADRÃO */
 
@@ -185,3 +188,4 @@ canvas {
     padding: 10px;
     border-radius: 12px;
 }
+
