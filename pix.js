@@ -52,3 +52,44 @@ QRCode.toCanvas(
     }
 );
 
+/* ===============================
+   POP-UP INFORMATIVO SEMPRE APARECE
+================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("paymentPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // sempre mostra o pop-up ao entrar na tela
+    popup.style.display = "flex";
+
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+});
+
+
+/* ===============================
+   POP-UP INFORMATIVO APENAS 1 VEZ
+================================
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("paymentPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // chave única dessa tela
+    const popupKey = "payment_popup_seen";
+
+    // mostra só se ainda não foi visto
+    if (!localStorage.getItem(popupKey)) {
+        popup.style.display = "flex";
+    } else {
+        popup.style.display = "none";
+    }
+
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+        localStorage.setItem(popupKey, "true");
+    });
+}); */
+
+
