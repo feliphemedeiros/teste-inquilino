@@ -139,14 +139,14 @@ html, body {
 
 .pix-info {
     
+    opacity: 70%;
     margin-top: 8px;
     margin-bottom: -5px;
     font-size: 12px;
     text-align: center;
-    color: #cbd5f5; /* cinza azulado confiável */
+    color: #94a3b8; 
     line-height: 1.4;
 }
-
 
 .copy-btn {
     display: flex;
@@ -192,6 +192,7 @@ canvas {
     padding: 10px;
     border-radius: 12px;
 }
+
 
 
 
