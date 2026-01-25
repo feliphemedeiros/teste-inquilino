@@ -60,21 +60,27 @@
     <span>Copiar código PIX</span>
 </button>
 
-    <p class="pix-info">
+   
+ <p class="pix-info">
+    🔔 Quando o pagamento for confirmado,
+        o aplicativo vai te avisar.
 
-    ⏳ Confirmação do pagamento em até <strong>24h.</strong>
-     
+
     </p>
 
 
+        <button class="toggle-qr-btn" id="toggleQr">
+    Mostrar QR Code
+</button>
 
-        <div class="qr-box">
-            <p>Ou escaneie o QR Code</p>
-            <canvas id="qrcode"></canvas>
-        </div>
-    </div>
+<div class="qr-box hidden" id="qrBox">
+    <p>Ou escaneie o QR Code</p>
+    <canvas id="qrcode"></canvas>
+</div>
+
 
 </div>
+
 
 
 <!-- POP-UP INFORMATIVO -->
@@ -85,9 +91,10 @@
         <h3>Confirmação do pagamento</h3>
 
         <p>
-            <strong> Após o pagamento, a confirmação <br>ocorre em até 24 horas</strong>.<br>
-            Você receberá uma mensagem automática.<br>
-            <strong>Não é necessário enviar comprovante.</strong>
+            Após pagar, aguarde até <strong>24h.</strong><br>
+             <strong>Não precisa mandar comprovante.</strong>
+
+
         </p>
 
         <button class="popup-btn" id="closePopup">
@@ -95,12 +102,16 @@
         </button>
     </div>
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script src="pix.js"></script>
 
 </body>
 </html>
+
 
 
 
