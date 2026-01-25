@@ -40,6 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// TOGGLE QR CODE
+const toggleQrBtn = document.getElementById("toggleQr");
+const qrBox = document.getElementById("qrBox");
+
+toggleQrBtn.addEventListener("click", () => {
+    const isOpen = !qrBox.classList.contains("hidden");
+
+    qrBox.classList.toggle("hidden");
+
+    toggleQrBtn.textContent = isOpen
+        ? "Mostrar QR Code"
+        : "Ocultar QR Code";
+});
 
 
 // Gerar QR Code
@@ -47,10 +60,11 @@ QRCode.toCanvas(
     document.getElementById("qrcode"),
     pixCode.trim(),
     {
-        width: 20,
+        width: 180,
         margin: 2
     }
 );
+
 
 /* ===============================
    POP-UP INFORMATIVO SEMPRE APARECE
@@ -93,3 +107,31 @@ document.addEventListener("DOMContentLoaded", () => {
 }); */
 
 
+/* ===============================
+   POP-UP INFORMATIVO APARECE 1 VEZ AO DIA
+================================ 
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("paymentPopup");
+    const closeBtn = document.getElementById("closePopup");
+
+    // pega a data de hoje (YYYY-MM-DD)
+    const today = new Date().toISOString().split("T")[0];
+
+    // chave no localStorage
+    const popupKey = "payment_popup_last_seen";
+
+    // data da última exibição
+    const lastSeen = localStorage.getItem(popupKey);
+
+    // só mostra se ainda não foi visto hoje
+    if (lastSeen !== today) {
+        popup.style.display = "flex";
+    } else {
+        popup.style.display = "none";
+    }
+
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+        localStorage.setItem(popupKey, today);
+    });
+});*/
