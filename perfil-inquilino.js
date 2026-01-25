@@ -24,3 +24,12 @@ document.getElementById("btnSobre").addEventListener("click", () => {
         "Desenvolvido para facilitar pagamentos, contratos e comunicação."
     );
 });
+
+document.getElementById("btnWhats").addEventListener("click", () => {
+    const phone = "5511999999999"; // DDI + DDD + número
+    const msg = encodeURIComponent(
+        "Olá! Estou falando pelo sistema sobre o contrato do imóvel."
+    );
+
+    window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+});
