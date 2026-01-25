@@ -3,20 +3,25 @@ const rents = [
     { mes: "Março / 2026", pagoEm: "10/03/2026", valor: "R$ 850,00" },
     { mes: "Abril / 2026", pagoEm: "10/04/2026", valor: "R$ 850,00" },
     { mes: "Maio / 2026", pagoEm: "10/05/2026", valor: "R$ 850,00" },
-     { mes: "Fevereiro / 2026", pagoEm: "10/02/2026", valor: "R$ 850,00" },
-    { mes: "Março / 2026", pagoEm: "10/03/2026", valor: "R$ 850,00" },
-    { mes: "Abril / 2026", pagoEm: "10/04/2026", valor: "R$ 850,00" },
-    { mes: "Maio / 2026", pagoEm: "10/05/2026", valor: "R$ 850,00" },
-     { mes: "Fevereiro / 2026", pagoEm: "10/02/2026", valor: "R$ 850,00" },
-    { mes: "Março / 2026", pagoEm: "10/03/2026", valor: "R$ 850,00" },
-    { mes: "Abril / 2026", pagoEm: "10/04/2026", valor: "R$ 850,00" },
-    { mes: "Maio / 2026", pagoEm: "10/05/2026", valor: "R$ 850,00" },
+    { mes: "Fevereiro / 2025", pagoEm: "10/02/2025", valor: "R$ 850,00" },
+    { mes: "Março / 2025", pagoEm: "10/03/2025", valor: "R$ 850,00" },
+    { mes: "Abril / 2025", pagoEm: "10/04/2025", valor: "R$ 850,00" },
+    { mes: "Maio / 2025", pagoEm: "10/05/2025", valor: "R$ 850,00" },
+    // pode ter mais registros, não tem problema
 ];
 
 const list = document.getElementById("rentList");
 
-/* GERAR CARDS – HISTÓRICO */
-rents.forEach((item, index) => {
+/* CONFIGURAÇÃO */
+const LAST_MONTHS = 12;
+
+
+/* PEGAR APENAS OS ÚLTIMOS 12 */
+const recentRents = rents.slice(-LAST_MONTHS);
+
+
+/* GERAR CARDS – HISTÓRICO (INQUILINO) */
+recentRents.forEach(item => {
     const card = document.createElement("div");
     card.className = "rent-card";
 
@@ -29,26 +34,13 @@ rents.forEach((item, index) => {
 
         <div class="rent-action">
             <span class="rent-value">${item.valor}</span>
-            <button class="receipt-btn" data-index="${index}">
-                Gerar recibo
-            </button>
         </div>
     `;
 
     list.appendChild(card);
 });
 
-/* CLIQUE EM GERAR RECIBO */
-document.querySelectorAll(".receipt-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        alert("Recibo gerado com sucesso (simulação)");
-        // Futuro: abrir PDF ou baixar recibo
-    });
-});
-
 /* BOTÃO VOLTAR */
 document.getElementById("btnVoltar").addEventListener("click", () => {
-    window.location.href = "./index.html";
+    window.location.href = "dashboard-inquilino.html";
 });
-
-
