@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #e5e7eb;
-    overflow: hidden;     /* 🔑 sem scroll */
+    overflow: auto;     /* 🔑 sem scroll */
 }
 
 .app-content {
@@ -24,6 +24,26 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+.app {
+    height: 100dvh; /* viewport real do mobile */
+    display: flex;
+    flex-direction: column;
+    background: #020617;
+}
+
+/* HEADER FIXO */
+.app-header {
+    flex-shrink: 0;
+}
+
+/* CONTEÚDO FLEXÍVEL */
+.app-content {
+    flex: 1;
+    overflow-y: auto;        /* 🔑 aqui está o segredo */
+    -webkit-overflow-scrolling: touch;
+}
+
 
 /* HEADER PADRÃO */
 
@@ -140,13 +160,14 @@ html, body {
 .pix-info {
     
     opacity: 70%;
-    margin-top: 8px;
-    margin-bottom: -5px;
-    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    font-size: 10px;
     text-align: center;
     color: #94a3b8; 
     line-height: 1.4;
 }
+
 
 .copy-btn {
     display: flex;
@@ -166,10 +187,36 @@ html, body {
 }
 
 
-
 .copy-btn:active {
     transform: scale(0.97);
 }
+
+/* ESCONDER QR CODE */
+
+.toggle-qr-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.qr-box {
+    margin-top: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    background: #0f172a;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
 
 /* QR CODE */
 .qr-box {
@@ -186,6 +233,12 @@ html, body {
     margin-top: 3px;
     margin-bottom: 12px;
 }
+
+.qr-box canvas {
+    max-width: 100%;
+    height: auto;
+}
+
 
 canvas {
     background: #fff;
@@ -256,7 +309,3 @@ canvas {
 .popup-btn:active {
     transform: scale(0.97);
 }
-
-
-
-
