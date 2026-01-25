@@ -117,13 +117,12 @@ body {
 
 .rent-action {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;     /* centraliza verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
 }
 
 .rent-value {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -150,7 +149,19 @@ body {
     font-size: 13px;
 }
 
-/* Botão gerar recibo (mesmo tamanho do Pagar PIX) */
+
+
+
+/* ===== Botão gerar recibo ===== */
+button {
+    &[class*="receipt"],
+    &[aria-label*="recibo"] {
+        display: none !important;
+    }
+}
+
+
+/* Botão gerar recibo (mesmo tamanho do Pagar PIX)
 .receipt-btn {
     background-color: transparent;
     color: #e5e7eb;
@@ -165,3 +176,5 @@ body {
 .receipt-btn:active {
     transform: scale(0.96);
 }
+
+ */
